@@ -1,0 +1,54 @@
+#page {
+  background-color: rgb(217, 218, 216);
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 100px;
+  margin-top: 10px;
+  margin-left: 35%;
+  margin-right: 35%;
+  display: grid;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 300px 300px 300px 400px 400px;
+  grid-template-areas:
+    "header header header"
+    "score score score"
+    "computerStrike computerStrike computerStrike"
+    "callback callback callback"
+    "b1 b2 b3";
+}
+.header {
+  grid-area: header;
+  text-align: center;
+  font-size: 60px;
+}
+.score {
+  grid-area: score;
+  font-size: 160px;
+  text-align: center;
+}
+.computerStrike {
+  grid-area: computerStrike;
+  font-size: 50px;
+  text-align: center;
+}
+
+.callback {
+  grid-area: callback;
+  font-size: 40px;
+  text-align: center;
+}
+
+#btnOne {
+  grid-area: b1;
+  font-size: 25px;
+}
+#btnTwo {
+  font-size: 25px;
+  grid-area: b2;
+}
+#btnThree {
+  font-size: 25px;
+  grid-area: b3;
+}
