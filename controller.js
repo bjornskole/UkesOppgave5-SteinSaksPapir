@@ -8,6 +8,11 @@ function gameEvaluator(strike) {
     : index === "Loss"
     ? ((color = "red"), computerScore++)
     : (color = "blue");
+  playerScore >= 10
+    ? (finalCol = "green")
+    : computerScore >= 10
+    ? (finalCol = "red")
+    : (finalCol = "black");
   app();
 }
 function condition(strike, val) {
