@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css" />
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+  <script>
+    const RSP = ["Rock", "Scissor", "Paper"];
+    // computer model
+    let val;
+    let strike = "Stein";
+    let computerStrike = "Scissor";
+    let playerStrike = "";
+    let callback = "Throw a strike";
+    let color = "black";
+    let playerScore = 0;
+    let computerScore = 0;
+    let finalCol = "blue";
+
+    // First Test
+    QUnit.test("Parent func gameEvaluator", function (assert) {
+      gameEvaluator(strike);
+      let actual = strike;
+      let expected = "Stein";
+
+      assert.equal(actual, expected, "Parent function runs as expected");
+    });
+    function app() {}
+
+    // Second test
+    QUnit.test(
+      "Does the child func condition return val after passing strike?",
+      function (assert) {
+        let actual = condition(strike);
+        let expected = val;
+
+        assert.equal(
+          actual,
+          expected,
+          "Child func condition passes strike and returns val as expected"
+        );
+      }
+    );
+  </script>
+</body>

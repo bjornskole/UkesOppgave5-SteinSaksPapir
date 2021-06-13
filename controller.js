@@ -15,7 +15,7 @@ function gameEvaluator(strike) {
     : (finalCol = "black");
   app();
 }
-function condition(strike, val) {
+function condition(strike) {
   playerStrike = strike;
   strike === computerStrike
     ? (callback = "Draw")
