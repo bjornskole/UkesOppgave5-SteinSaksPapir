@@ -1,5 +1,7 @@
 // model
 const RSP = ["Rock", "Scissor", "Paper"];
+const resultArr = [];
+let resultBoard;
 // computer model
 let randomNR;
 let computerStrike = "";
@@ -16,11 +18,26 @@ app();
 function app() {
   playerScore >= 10
     ? (document.getElementById("app").innerHTML = `<div id="page">
-  <div  class="header" style="color:${finalCol}">Game over you Win!!</div> 
+  <div  class="header"> <h4 style="color:${finalCol}">Game over you Win!!</h4>
+  <h5> GameBoard: </h5>
+  <div class="computerStrike">${resultArr.map((item, val) => {
+    return `<p>Round: ${val++ + 1} - Player striked: ${
+      item.player
+    }</p> <p>Computer Striked: ${item.computer}</p>`;
+  })}</div>
+  </div> 
+  
   </div>`)
     : computerScore >= 10
     ? (document.getElementById("app").innerHTML = `<div id="page">
-    <div class="header" style="color:${finalCol}" >Game over you Loose!!</div> 
+    <div class="header"> <h4 style="color:${finalCol}">Game over you Loose!!</h4> 
+    <h5> GameBoard: </h5>
+    <div class="computerStrike">${resultArr.map((item, val = 1) => {
+      return `<p>Round: ${val++ + 1} - Player striked: ${
+        item.player
+      }</p> <p>Computer Striked: ${item.computer}</p>`;
+    })}</div> 
+   
     </div>`)
     : (document.getElementById("app").innerHTML = `<div id="page">
   <div class="header">Rock Scissor Paper</div>
@@ -30,5 +47,6 @@ function app() {
   <button value="Rock" id="btnOne" onclick="(gameEvaluator(this.value))">Rock</button>
   <button value="Scissor" id="btnTwo" onclick="(gameEvaluator(this.value))">Scissor</button>
   <button value="Paper" id="btnThree" onclick="(gameEvaluator(this.value))">Paper</button>
+  
   </div>`);
 }

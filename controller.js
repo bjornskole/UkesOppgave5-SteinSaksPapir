@@ -1,7 +1,10 @@
 // controller
+
 function gameEvaluator(strike) {
   let randomNR = Math.floor(Math.random() * 3);
   computerStrike = RSP[randomNR];
+  resultArr.push({ player: strike, computer: computerStrike });
+
   let value = condition(strike);
   value === "Victory"
     ? ((color = "green"), playerScore++)
@@ -33,4 +36,10 @@ function condition(strike) {
     ? ((callback = "You lost, Rock beats Scissors"), (val = "Loss"))
     : "null";
   return val;
+}
+
+function resultMaker() {
+  resultBoard = resultArr.map(
+    (item) => `<div>${item.player} - ${item.computer}</div>`
+  );
 }
