@@ -4,13 +4,13 @@ function gameEvaluator(strike) {
   let randomNR = Math.floor(Math.random() * 3);
   computerStrike = RSP[randomNR];
   resultArr.push({ player: strike, computer: computerStrike });
-
   let value = condition(strike);
   value === "Victory"
     ? ((color = "green"), playerScore++)
     : value === "Loss"
     ? ((color = "red"), computerScore++)
     : (color = "blue");
+
   playerScore >= 10
     ? (finalCol = "green")
     : computerScore >= 10
@@ -18,7 +18,7 @@ function gameEvaluator(strike) {
     : (finalCol = "black");
   app();
 }
-function condition(strike) {
+function condition(strike, val) {
   playerStrike = strike;
   strike === computerStrike
     ? (callback = "Draw")

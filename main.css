@@ -9,7 +9,7 @@
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 80px 150px 100px 5000px;
+  grid-template-rows: 80px 150px 100px 7000px;
   grid-template-areas:
     "header header header"
     "score score score"
