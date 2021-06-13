@@ -16,11 +16,11 @@ app();
 function app() {
   playerScore >= 10
     ? (document.getElementById("app").innerHTML = `<div id="page">
-  <div  class="header" style="color:${finalCol}">Victory!!</div> 
+  <div  class="header" style="color:${finalCol}">Game over you Win!!</div> 
   </div>`)
     : computerScore >= 10
     ? (document.getElementById("app").innerHTML = `<div id="page">
-    <div class="header" style="color:${finalCol}" >You Loose!</div> 
+    <div class="header" style="color:${finalCol}" >Game over you Loose!!</div> 
     </div>`)
     : (document.getElementById("app").innerHTML = `<div id="page">
   <div class="header">Rock Scissor Paper</div>

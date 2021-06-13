@@ -2,10 +2,10 @@
 function gameEvaluator(strike) {
   let randomNR = Math.floor(Math.random() * 3);
   computerStrike = RSP[randomNR];
-  let index = condition(strike);
-  index === "Victory"
+  let value = condition(strike);
+  value === "Victory"
     ? ((color = "green"), playerScore++)
-    : index === "Loss"
+    : value === "Loss"
     ? ((color = "red"), computerScore++)
     : (color = "blue");
   playerScore >= 10
