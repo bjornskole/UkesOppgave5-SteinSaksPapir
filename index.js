@@ -51,6 +51,6 @@ function app() {
   <button value="Paper" id="btnThree" onclick="(gameEvaluator(this.value))">Paper</button>
   </div>`)
     : (document.getElementById("app").innerHTML = `
-  <div class="header" > <button onclick="startTheGame()">Start game!</button> 
+  <div class="header" > <button class="header" onclick="startTheGame()">Start game!</button> 
   `);
 }
