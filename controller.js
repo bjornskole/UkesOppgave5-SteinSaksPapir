@@ -23,17 +23,18 @@ function condition(strike, val) {
   strike === computerStrike
     ? (callback = "Draw")
     : strike === "Paper" && computerStrike === "Rock"
-    ? ((callback = "you Win, Paper beats Rock"), (val = "Victory"))
+    ? ((callback = "you win the round, paper beats rock"), (val = "Victory"))
     : strike === "Rock" && computerStrike === "Paper"
-    ? ((callback = "You Lost, Paper beats Rock"), (val = "Loss"))
+    ? ((callback = "You lost the round, paper beats rock"), (val = "Loss"))
     : strike === "Scissor" && computerStrike === "Paper"
-    ? ((callback = "You win, Scissors beats paper"), (val = "Victory"))
+    ? ((callback = "You win the round, scissors beats paper"),
+      (val = "Victory"))
     : strike === "Paper" && computerStrike === "Scissor"
-    ? ((callback = "You lost, Scissors beats Paper"), (val = "Loss"))
+    ? ((callback = "You lost the round, scissors beats paper"), (val = "Loss"))
     : strike === "Rock" && computerStrike === "Scissor"
-    ? ((callback = "You win, Rock beats Scissors"), (val = "Victory"))
+    ? ((callback = "You win the round, rock beats scissors"), (val = "Victory"))
     : strike === "Scissor" && computerStrike === "Rock"
-    ? ((callback = "You lost, Rock beats Scissors"), (val = "Loss"))
+    ? ((callback = "You lost the round, rock beats scissors"), (val = "Loss"))
     : "null";
   return val;
 }
