@@ -2,7 +2,6 @@
 const RSP = ["Rock", "Scissor", "Paper"];
 const resultArr = [];
 let resultBoard;
-// computer model
 let randomNR;
 let computerStrike = "";
 let playerStrike = "";
