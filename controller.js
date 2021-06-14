@@ -38,8 +38,6 @@ function condition(strike, val) {
   return val;
 }
 
-function resultMaker() {
-  resultBoard = resultArr.map(
-    (item) => `<div>${item.player} - ${item.computer}</div>`
-  );
-}
+const startTheGame = () => {
+  (playGame = true), app();
+};
