@@ -16,6 +16,7 @@ let playGame = false;
 
 app();
 function app() {
+  //this condition shows game board if player wins
   playerScore >= 10
     ? (document.getElementById("app").innerHTML = `<div id="page">
   <div  class="header"> <h4 style="color:${finalCol}">Game over you Win!!</h4>
@@ -26,9 +27,9 @@ function app() {
     }</p> <p>Computer Striked: ${item.computer}</p>`;
   })}</div>
   </div> 
-  
   </div>`)
-    : computerScore >= 10
+    : // this condition shows game board if computer wins
+    computerScore >= 10
     ? (document.getElementById("app").innerHTML = `<div id="page">
     <div class="header"> <h4 style="color:${finalCol}">Game over you Loose!!</h4> 
     <h5> GameBoard: </h5>
@@ -37,19 +38,21 @@ function app() {
         item.player
       }</p> <p>Computer Striked: ${item.computer}</p>`;
     })}</div> 
-   
-    </div>`)
-    : playGame === true
-    ? (document.getElementById("app").innerHTML = `<div id="page">
-  <div class="header">Rock Scissor Paper</div>
-  <div class="score" style="color: ${color}">${playerScore} - ${computerScore}<div>
-  <div class="computerStrike">${playerStrike}-${computerStrike} </div>
-  <div style="color:${color}" class="callback">${callback}</div>
-  <button value="Rock" id="btnOne" onclick="(gameEvaluator(this.value))"><img src="rock.png" ></button>
-  <button value="Scissor" id="btnTwo" onclick="(gameEvaluator(this.value))"><img src="scissor.png" ></button>
-  <button value="Paper" id="btnThree" onclick="(gameEvaluator(this.value))"><img src="paper.png" ></button>
-  </div>`)
-    : (document.getElementById("app").innerHTML = `
-  <div class="header" > <button class="header" onclick="startTheGame()">Start game!</button> 
-  `);
+   </div>`)
+    : // this condition shows the play game button.
+    playGame === false
+    ? (document.getElementById("app").innerHTML = `
+    <div class="header" > <button class="header" onclick="startTheGame()">Start game!</button> 
+    `)
+    : // this last default condition shows the game if we press the play game: set playGame to true
+      (document.getElementById("app").innerHTML = `<div id="page">
+    <div class="header">Rock Paper Scissor</div>
+    <div class="score" style="color: ${color}">${playerScore} - ${computerScore}<div>
+    <div class="computerStrike">${playerStrike}-${computerStrike} </div>
+    <div style="color:${color}" class="callback">${callback}</div>
+    <button value="Rock" id="btnOne" onclick="(gameEvaluator(this.value))"><img src="rock.png" ></button>
+    <button value="Paper" id="btnTwo" onclick="(gameEvaluator(this.value))"><img src="paper.png" ></button>
+    <button value="Scissor" id="btnThree" onclick="(gameEvaluator(this.value))"><img src="scissor.png" ></button>
+    
+    </div>`);
 }

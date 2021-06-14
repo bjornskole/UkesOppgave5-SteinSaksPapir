@@ -4,6 +4,7 @@ function gameEvaluator(strike) {
   let randomNR = Math.floor(Math.random() * 3);
   computerStrike = RSP[randomNR];
   resultArr.push({ player: strike, computer: computerStrike });
+  console.log(resultArr);
   let value = condition(strike);
   value === "Victory"
     ? ((color = "green"), playerScore++)
