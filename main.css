@@ -45,21 +45,21 @@
 #btnOne {
   grid-area: b1;
   font-size: 25px;
-  padding: 5%;
   border-radius: 10px;
 }
 #btnTwo {
   font-size: 25px;
   grid-area: b2;
-  padding: 5%;
   border-radius: 10px;
 }
 #btnThree {
   font-size: 25px;
   grid-area: b3;
-  padding: 5%;
   border-radius: 10px;
 }
 #resultBoard {
   grid-area: resultBoard;
+}
+img {
+  height: 200px;
 }

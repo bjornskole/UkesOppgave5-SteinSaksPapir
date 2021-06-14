@@ -46,9 +46,9 @@ function app() {
   <div class="score" style="color: ${color}">${playerScore} - ${computerScore}<div>
   <div class="computerStrike">${playerStrike}-${computerStrike} </div>
   <div style="color:${color}" class="callback">${callback}</div>
-  <button value="Rock" id="btnOne" onclick="(gameEvaluator(this.value))">Rock</button>
-  <button value="Scissor" id="btnTwo" onclick="(gameEvaluator(this.value))">Scissor</button>
-  <button value="Paper" id="btnThree" onclick="(gameEvaluator(this.value))">Paper</button>
+  <button value="Rock" id="btnOne" onclick="(gameEvaluator(this.value))"><img src="rock.png" ></button>
+  <button value="Scissor" id="btnTwo" onclick="(gameEvaluator(this.value))"><img src="scissor.png" ></button>
+  <button value="Paper" id="btnThree" onclick="(gameEvaluator(this.value))"><img src="paper.png" ></button>
   </div>`)
     : (document.getElementById("app").innerHTML = `
   <div class="header" > <button class="header" onclick="startTheGame()">Start game!</button> 
