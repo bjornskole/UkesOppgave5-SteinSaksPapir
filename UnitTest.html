@@ -19,6 +19,7 @@
     let playerScore = 0;
     let computerScore = 0;
     let finalCol = "blue";
+    let playGame = false;
 
     // First Test
     QUnit.test("Parent func gameEvaluator", function (assert) {
@@ -28,7 +29,6 @@
 
       assert.equal(actual, expected, "Parent function runs as expected");
     });
-    function app() {}
 
     // Second test
     QUnit.test(
@@ -44,5 +44,14 @@
         );
       }
     );
+    // Third test
+    QUnit.test("Start the game function", function (assert) {
+      startTheGame();
+      let actual = playGame;
+      let expected = true;
+
+      assert.equal(actual, expected, "Child func starts the game");
+    });
+    function app() {}
   </script>
 </body>
