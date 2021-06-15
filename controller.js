@@ -1,9 +1,10 @@
 // controller
-
+const role1 = "player";
+const role2 = "computer";
 function gameEvaluator(strike) {
   let randomNR = Math.floor(Math.random() * 3);
   computerStrike = RSP[randomNR];
-  resultArr.push({ player: strike, computer: computerStrike });
+  resultArr.push({ [role1]: strike, [role2]: computerStrike });
   console.log(resultArr);
   let value = condition(strike);
   value === "Victory"

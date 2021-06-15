@@ -4,14 +4,14 @@
   border: 1px solid gray;
   border-radius: 10px;
   margin: 1%;
-  margin-left: 30%;
-  margin-right: 30%;
-  padding: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+
   display: grid;
   height: 100%;
   /* overflow: auto; */
   justify-content: space-evenly;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 10%;
   grid-template-rows: auto;
   grid-template-areas:
     "header header header"
@@ -27,7 +27,7 @@
 }
 .score {
   grid-area: score;
-  font-size: 60px;
+  font-size: 10%;
   text-align: center;
 }
 .computerStrike {
@@ -44,16 +44,16 @@
 
 #btnOne {
   grid-area: b1;
-  font-size: 25px;
+  font-size: 15px;
   border-radius: 10px;
 }
 #btnTwo {
-  font-size: 25px;
+  font-size: 15px;
   grid-area: b2;
   border-radius: 10px;
 }
 #btnThree {
-  font-size: 25px;
+  font-size: 15px;
   grid-area: b3;
   border-radius: 10px;
 }
@@ -61,5 +61,56 @@
   grid-area: resultBoard;
 }
 img {
-  height: 200px;
+  width: 50%;
+  height: auto;
+}
+
+/* Use Media Query to add a breakpoint at 800px: */
+@media screen and (max-width: 400px) {
+  #btnOne {
+    grid-area: b1;
+    font-size: 15px;
+    border-radius: 1px;
+    width: 20%;
+  }
+  #btnTwo {
+    font-size: 15px;
+    grid-area: b2;
+    border-radius: 1px;
+    width: 20%;
+  }
+  #btnThree {
+    font-size: 15px;
+    grid-area: b3;
+    border-radius: 1px;
+    width: 20%;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #btnOne {
+    grid-area: b1;
+    font-size: 15px;
+    border-radius: 1px;
+    width: 20%;
+  }
+  #btnTwo {
+    font-size: 15px;
+    grid-area: b2;
+    border-radius: 1px;
+    width: 20%;
+  }
+  #btnThree {
+    font-size: 15px;
+    grid-area: b3;
+    border-radius: 1px;
+    width: 20%;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
 }
